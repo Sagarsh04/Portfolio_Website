@@ -1,5 +1,5 @@
 import React from "react";
-import Tilt from "react-tilt"; //hover on them and they tilt
+import Tilt from 'react-parallax-tilt';
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";

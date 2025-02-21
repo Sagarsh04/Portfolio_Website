@@ -1,21 +1,12 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/0fYi8SGA20k?feature=shared" target="_blank">
-      <img src="https://github.com/adrianhajdin/project_3D_developer_portfolio/assets/151519281/4722160a-8e61-403f-a905-728feae1f7e6" alt="Project Banner">
-    </a>
-  <br />
-
+   <h1 align="center">A 3D Developer Portfolio</h1>
+  
   <div>
     <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
     <img src="https://img.shields.io/badge/-Three_JS-black?style=for-the-badge&logoColor=white&logo=threedotjs&color=000000" alt="three.js" />
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
   </div>
-
-  <h3 align="center">A 3D Developer Portfolio</h3>
-
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
@@ -30,19 +21,12 @@
 
 ## 🚨 Tutorial
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/0fYi8SGA20k?feature=shared" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+This repository contains the code of Sagar Sharma Web Portfolio 
 
 ## <a name="introduction">🤖 Introduction</a>
 
-By developing this project, you will gain hands-on experience in crafting immersive web experiences, mastering 3D libraries, and implementing engaging animations. The combination of creativity and technical skills showcased in this project serves as an excellent learning opportunity for developers seeking to enhance their portfolio and captivate users with cutting-edge web design.
+By developing this project, I gain hands-on experience in crafting immersive web experiences, mastering 3D libraries, and implementing engaging animations. The combination of creativity and technical skills showcased in this project serves as an excellent learning opportunity for developers seeking to enhance their portfolio and captivate users with cutting-edge web design.
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -89,7 +73,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone git@github.com:adrianhajdin/project_3D_developer_portfolio.git
+https://github.com/Sagarsh04/Portfolio_Website.git
 cd project_3D_developer_portfolio
 ```
 
@@ -128,7 +112,8 @@ Open [http://localhost:5173](http://localhost:5173) in your browser to view the 
 
 ```javascript
 import {
-  mobile,
+  // mobile,
+  frontend,
   backend,
   creator,
   web,
@@ -142,16 +127,19 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
+  // figma,
   docker,
   meta,
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  // carrent,
+  Lottery,
+  Hotstar,
+  // jobit,
+  // tripguide,
+  ecommerece,
+  threejs,devops,sm,bootstrap,
 } from "../assets";
 
 export const navLinks = [
@@ -175,16 +163,16 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "Front-End Developer",
+    icon: frontend,
   },
   {
     title: "Backend Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title:"Devops",
+    icon: devops,
   },
 ];
 
@@ -202,8 +190,8 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Bootstrap",
+    icon: bootstrap,
   },
   {
     name: "React JS",
@@ -233,10 +221,10 @@ const technologies = [
     name: "git",
     icon: git,
   },
-  {
-    name: "figma",
-    icon: figma,
-  },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
   {
     name: "docker",
     icon: docker,
@@ -246,8 +234,8 @@ const technologies = [
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    // company_name: "Starbucks",
+    icon: sm,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
     points: [
@@ -259,8 +247,8 @@ const experiences = [
   },
   {
     title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    // company_name: "Tesla",
+    icon: sm,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
@@ -272,8 +260,8 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    // company_name: "Shopify",
+    icon: sm,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [
@@ -285,8 +273,8 @@ const experiences = [
   },
   {
     title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    // company_name: "Meta",
+    icon: sm,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
     points: [
@@ -301,7 +289,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "Sagar is a quick learner with strong full-stack skills, delivering optimized, user-friendly, and high-performance applications",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
@@ -309,7 +297,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "Working with Sagar has been amazing! His expertise in React and Node.js ensures efficient, scalable applications.",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
@@ -317,19 +305,20 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "Sagar’s commitment to learning and improving is remarkable. His ability to turn ideas into seamless user experiences is impressive.",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
+
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Lottery Game Application",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "The Lottery Game Application is a web-based platform built with React.js, MongoDB, and Tailwind CSS. It allows users to participate in an online lottery by purchasing tickets, entering draws, and checking results. The system ensures fair play using a random number generation algorithm and provides a seamless user experience with a modern UI.",
     tags: [
       {
         name: "react",
@@ -344,13 +333,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: Lottery,
+    //source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "Hotstar Clone",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web-based streaming platform built using HTML, CSS, React.js, and REST API. It allows users to browse, stream, and search for movies, TV shows, and sports content. The application fetches data from a backend REST API to display trending content, categories, and user preferences while providing a smooth and interactive UI.",
     tags: [
       {
         name: "react",
@@ -360,38 +349,35 @@ const projects = [
         name: "restapi",
         color: "green-text-gradient",
       },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: Hotstar,
+    // source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "E-Commerce Website",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "The E-Commerce Website is a full-stack web application built using HTML, CSS, React.js, and REST API. It provides a seamless online shopping experience where users can browse products, add items to their cart, and complete purchases. The platform features dynamic product listings, and a user-friendly interface designed for smooth navigation",
     tags: [
       {
-        name: "nextjs",
+        name: "frontend",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "backend",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "database",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: ecommerece,
+    // source_code_link: "https://github.com/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services,technologies,experiences,  testimonials, projects };
+
 ```
 </details>
 
@@ -761,16 +747,3 @@ module.exports = {
 
 </details>
 
-## <a name="links">🔗 Links</a>
-
-Models and Assets used in the project can be found [here](https://drive.google.com/drive/folders/1KVU8iaH0E_JFtShNiR3BgCSA3pawXY4Z)
-
-## <a name="more">🚀 More</a>
-
-**Advance your skills with Next.js Pro Course**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning experience. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://www.jsmastery.pro/ultimate-next-course" target="_blank">
-<img src="https://i.ibb.co/804sPK6/Image-720.png" alt="Project Banner">
-</a>
