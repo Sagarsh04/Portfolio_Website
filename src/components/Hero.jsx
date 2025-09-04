@@ -1,13 +1,9 @@
 import { motion } from "framer-motion";
 import React, { Suspense, lazy } from "react";
-import { useGLTF } from "@react-three/drei";
 
 import { styles } from "../styles";
 
 const ComputersCanvas = lazy(() => import("./canvas/Computers"));
-
-// Preload heavy model as soon as Hero chunk is loaded
-useGLTF.preload("./desktop_pc/scene.glb");
 
 const Hero = () => {
   return (
