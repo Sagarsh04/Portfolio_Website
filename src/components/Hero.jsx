@@ -7,7 +7,7 @@ import { styles } from "../styles";
 const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
 // Preload heavy model as soon as Hero chunk is loaded
-useGLTF.preload("./desktop_pc/scene.gltf");
+useGLTF.preload("./desktop_pc/scene.glb");
 
 const Hero = () => {
   return (
