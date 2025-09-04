@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
@@ -7,8 +7,9 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-
-
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 const Contact = () => {
   const formRef = useRef();
@@ -19,6 +20,26 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
+  const [earthVisible, setEarthVisible] = useState(false);
+  const earthRef = useRef(null);
+
+  useEffect(() => {
+    const el = earthRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setEarthVisible(true);
+            obs.disconnect();
+          }
+        });
+      },
+      { root: null, rootMargin: "200px", threshold: 0.1 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
 
   const handleChange = (e) => {
     const { target } = e;
@@ -35,8 +56,9 @@ const Contact = () => {
     setLoading(true);
 
     emailjs
-      .send("service_sl46mza",
-        "template_i5m4b67",
+      .send(
+        SERVICE_ID,
+        TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Sagar Sharma",
@@ -44,7 +66,7 @@ const Contact = () => {
           to_email: "sharmasagar8407@gmail.com",
           message: form.message,
         },
-        "zhoMCoIwWQ2mc7cZG",
+        PUBLIC_KEY,
       )
       .then(
         () => {
@@ -128,8 +150,9 @@ const Contact = () => {
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        ref={earthRef}
       >
-        <EarthCanvas />
+        {earthVisible ? <EarthCanvas /> : null}
       </motion.div>
     </div>
   );
