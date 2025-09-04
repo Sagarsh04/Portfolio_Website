@@ -18,6 +18,7 @@
 5. 🕸️ [Snippets](#snippets)
 6. 🔗 [Links](#links)
 7. 🚀 [More](#more)
+8. ☁️ [Cloudflare Pages](#cloudflare-pages)
 
 ## 🚨 Tutorial
 
@@ -90,9 +91,9 @@ npm install
 Create a new file named `.env` in the root of your project and add the following content:
 
 ```env
-REACT_APP_EMAILJS_USERID=your_emailjs_user_id
-REACT_APP_EMAILJS_TEMPLATEID=your_emailjs_template_id
-REACT_APP_EMAILJS_RECEIVERID=your_emailjs_receiver_id
+VITE_EMAILJS_SERVICE_ID=your_emailjs_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
 ```
 
 Replace the placeholder values with your actual EmailJS credentials. You can obtain these credentials by signing up on the [EmailJS website](https://www.emailjs.com/).
@@ -737,7 +738,7 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
+        "hero-pattern": "url('/src/assets/herobg.webp')",
       },
     },
   },
@@ -746,4 +747,30 @@ module.exports = {
 ```
 
 </details>
+
+## <a name="cloudflare-pages">☁️ Cloudflare Pages</a>
+
+This project is optimized for Cloudflare Pages (free plan):
+
+- `public/_headers` sets security and caching headers. Static assets (`/assets/*`) are cached for 1 year with `immutable`. GLTF folders (`/desktop_pc/*`, `/planet/*`) and common images are cached for 7 days with `stale-while-revalidate`.
+- `public/_redirects` contains a SPA fallback (`/* /index.html 200`).
+- Resource hints in `index.html` add preconnect/dns-prefetch for Google Fonts.
+- Heavy sections and 3D canvases are lazy-loaded to minimize initial JS and TTFB.
+- EmailJS config reads from `VITE_` environment variables.
+
+### Deploying to Cloudflare Pages
+
+1. Push to GitHub and create a new Pages project in the Cloudflare dashboard.
+2. Framework preset: "Vite". Build command: `npm run build`. Build output directory: `dist`.
+3. Environment variables (Production & Preview):
+   - `VITE_EMAILJS_SERVICE_ID`
+   - `VITE_EMAILJS_TEMPLATE_ID`
+   - `VITE_EMAILJS_PUBLIC_KEY`
+4. Ensure the repository includes `public/_headers` and `public/_redirects` (they are picked up automatically).
+5. Trigger a deploy. Pages will serve static content via the edge with the specified headers.
+
+### Notes on caching and performance
+- HTML is served `no-cache` to allow instant updates. Static assets are long‑cached with content hashes. GLTFs and images have a 7‑day cache to allow updates without busting too often.
+- Because assets are under `public/`, Vite emits content‑hashed files for `/src/assets/*` and respects `_headers` for `public/*` paths.
+- The app lazy-loads non-critical sections; initial paint focuses on navbar and hero, with 3D hero canvas loaded in a separate chunk.
 
