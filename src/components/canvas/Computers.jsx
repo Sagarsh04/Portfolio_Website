@@ -9,7 +9,11 @@ import CanvasLoader from "../Loader";
 async function urlExists(url) {
   try {
     const res = await fetch(url, { method: 'HEAD' });
-    return res.ok;
+    if (!res.ok) return false;
+    const ct = res.headers.get('content-type') || '';
+    // Reject SPA fallbacks that return HTML
+    if (ct.includes('text/html')) return false;
+    return true;
   } catch {
     return false;
   }
