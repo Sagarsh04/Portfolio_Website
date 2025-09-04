@@ -210,7 +210,7 @@ This repository contains the code for Sagar Sharma’s portfolio. You’re welco
 - Improved by: **Nikhil Kumar** — Performance & 3D Optimization
 
   <a href="https://github.com/NICxKMS" target="_blank"><img src="https://img.shields.io/badge/GitHub-NICxKMS-181717?logo=github&logoColor=white"/></a>
-  <a href="https://www.linkedin.com/in/nikhil-nicx-sagar" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Nikhil%20%22nicx%22%20Sagar-0A66C2?logo=linkedin&logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/nikhil-nicx-sagar" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Nikhil%20Kumar-0A66C2?logo=linkedin&logoColor=white"/></a>
 
 You can review detailed changes in Git history (commit authorship).
 
